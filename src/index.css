@@ -61,14 +61,10 @@ body {
     }
 
     nav {
-        @apply fixed z-50 w-full;
+        @apply fixed z-69 w-full ;
 
         div {
-            @apply flex md:flex-row flex-col md:justify-between items-center gap-5 py-5 lg:px-0 px-5 container mx-auto;
-        }
-
-        p {
-            @apply font-kameron text-3xl -mb-2;
+            @apply flex md:flex-row flex-col md:justify-between items-center gap-5 py-5 px-12; ;
         }
 
         a {
@@ -76,7 +72,10 @@ body {
         }
 
         ul {
-            @apply flex-center lg:gap-12 gap-7;
+            @apply flex-center lg:gap-12 gap-7 font-coiny;
+        }
+        img {
+            @apply h-12 w-auto max-w-[160px] object-contain;
         }
     }
 
