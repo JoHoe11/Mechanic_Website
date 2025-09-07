@@ -8,7 +8,6 @@ const HeroTitle = (paragraphRef) => {
     const [isSwapping, setIsSwapping] = useState(false);
     const [isLoaded, setIsLoaded] = useState(false);
 
-    // Split title into letters and set loaded state
     useEffect(() => {
         const title = "FAHRZEUGTECHNICK";
         setTitleLetters(title.split(""));
@@ -18,12 +17,10 @@ const HeroTitle = (paragraphRef) => {
         }, 100);
     }, []);
 
-    // Update swap letters whenever swapText changes
     useEffect(() => {
         setSwapLetters(swapText.split(""));
     }, [swapText]);
 
-    // Initial animations - only run once isLoaded is true
     useEffect(() => {
         if (!isLoaded) return;
 
@@ -86,7 +83,6 @@ const HeroTitle = (paragraphRef) => {
         };
     }, [isLoaded, paragraphRef]);
 
-    // Animate in new text whenever swapLetters changes during swapping
     useEffect(() => {
         if (isSwapping && swapText === "BEWÄHRT & HOCHWÄHRTIG") {
             gsap.fromTo(

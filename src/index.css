@@ -285,7 +285,7 @@ body {
                 @apply  gap-5 mt-20;
 
                 .UnfCard {
-                    @apply rounded-2xl p-6 w-[280px] h-[250px] relative overflow-hidden;
+                    @apply rounded-2xl p-6 h-[250px] relative overflow-hidden;
 
                     &::before {
                         content: "";
@@ -320,7 +320,7 @@ body {
                 }
 
                 .MotCard {
-                    @apply rounded-2xl p-6 pt-3 w-[280px] h-[250px] mt-18 relative overflow-hidden;
+                    @apply rounded-2xl p-6 pt-3 h-[250px] mt-18 relative overflow-hidden;
 
                     &::before {
                         content: "";
@@ -373,151 +373,26 @@ body {
     #about {
         @apply min-h-screen py-28 2xl:px-0 px-5 container mx-auto;
 
-        .content {
-            @apply grid grid-cols-1 lg:grid-cols-12 gap-5;
+        h1 {
+            @apply text-center text-4xl sm:text-5xl md:text-6xl lg:text-6xl tracking-tight font-kameron font-bold text-red;
 
-            h2 {
-                @apply text-5xl md:text-6xl font-kameron max-w-lg;
+            span {
+                @apply text-white;
             }
+        }
+        p {
+            @apply mt-1 text-xs sm:text-sm md:text-lg lg:text-lg xl:text-lg text-center font-coiny max-w-xl mx-auto text-white;
 
-            .sub-content {
-                @apply md:col-span-4 space-y-5 flex flex-col justify-between;
-
-                p {
-                    @apply text-lg;
-                }
-
-                div {
-                    @apply flex flex-col justify-between md:gap-2 gap-5;
-
-                    span {
-                        @apply text-red font-bold text-5xl;
-                    }
-                }
+            span {
+                @apply text-red;
             }
         }
 
-        .badge {
-            @apply inline-block rounded-full bg-white text-black px-4 py-2 text-sm font-medium mb-8;
+        .Blank {
+            @apply flex gap-30 justify-center flex-wrap mt-20;
         }
 
-        .top-grid {
-            @apply grid grid-cols-1 xl:grid-cols-12 gap-5 mb-5 md:px-0 px-5;
 
-            > div {
-                @apply rounded-3xl overflow-hidden h-72 relative;
-            }
-
-            img {
-                @apply object-cover w-full h-full;
-            }
-        }
-
-        .bottom-grid {
-            @apply grid grid-cols-1 md:grid-cols-12 gap-5 md:px-0 px-5;
-
-            > div {
-                @apply rounded-3xl overflow-hidden h-72 relative;
-            }
-
-            img {
-                @apply object-cover w-full h-full;
-            }
-        }
-    }
-
-    #art {
-        @apply flex-center flex-col min-h-dvh p-5 mt-20 relative radial-gradient;
-
-        h2 {
-            @apply relative md:text-[20vw] text-8xl text-nowrap leading-none font-kameron text-center text-[#505050] mb-8;
-        }
-
-        .content {
-            @apply flex md:flex-row flex-col justify-between md:mb-16 md:mt-0 mt-40 gap-10;
-        }
-
-        .cocktail-img {
-            @apply md:w-[60vw] w-full h-[50vh] md:h-[70vh] rounded-4xl overflow-hidden absolute top-0 md:top-1/2 md:-translate-y-1/2 left-1/2 -translate-x-1/2;
-        }
-
-        .masked-container {
-            h2 {
-                @apply text-4xl md:text-5xl font-kameron text-center mb-10 text-white mt-32;
-            }
-
-            div {
-                @apply opacity-0 md:px-0 px-5 space-y-5 absolute md:bottom-5 bottom-52 left-1/2 -translate-x-1/2;
-
-                h3 {
-                    @apply md:text-5xl text-2xl text-center font-serif md:w-full w-80 text-white;
-                }
-
-                p {
-                    @apply text-lg text-center;
-                }
-            }
-        }
-    }
-
-    #menu {
-        @apply relative w-full md:mt-40 mt-0 2xl:px-0 px-5 py-20 radial-gradient;
-
-        #m-left-leaf {
-            @apply object-contain absolute -bottom-20 left-0 md:w-fit w-1/3;
-        }
-
-        #m-right-leaf {
-            @apply object-contain absolute -top-40 right-0 md:w-fit w-1/4;
-        }
-
-        .cocktail-tabs {
-            @apply grid md:grid-cols-4 grid-cols-2 md:gap-20 gap-10 sm:mb-32 mb-20 relative z-10 md:max-w-6xl md:mx-auto;
-
-            button {
-                @apply md:text-3xl text-xl pb-2 cursor-pointer hover:text-red hover:border-red border-b-1 transition-colors font-kameron;
-            }
-        }
-
-        .content {
-            @apply flex flex-col justify-between items-center container mx-auto relative;
-
-            .arrows {
-                @apply flex items-center justify-between w-full absolute;
-
-                button {
-                    @apply text-white hover:text-red cursor-pointer transition-colors max-w-36;
-
-                    span {
-                        @apply text-3xl font-kameron leading-none hidden md:block;
-                    }
-                }
-            }
-        }
-
-        .recipe {
-            @apply flex max-md:flex-col gap-10 md:items-center justify-between w-full lg:absolute bottom-0;
-
-            .info {
-                @apply space-y-4 lg:translate-y-20;
-
-                #title {
-                    @apply font-kameron md:text-6xl text-3xl text-red max-w-40;
-                }
-            }
-
-            .details {
-                @apply space-y-5 md:max-w-md text-left;
-
-                h2 {
-                    @apply md:text-5xl text-3xl font-serif;
-                }
-
-                p {
-                    @apply md:text-lg pe-5;
-                }
-            }
-        }
     }
 
     #contact {
@@ -547,5 +422,9 @@ body {
             }
         }
 
+    }
+
+    #footer {
+        @apply bg-black/60 backdrop-blur-md border-b border-black/70;
     }
 }
