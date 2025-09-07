@@ -1,50 +1,47 @@
-import React, {useRef, useEffect, useState} from "react";
-import gsap from "gsap";
+import React, { useRef, useEffect, useState } from "react";
+import ContactBtn from "./Animation/ContactBtn";
+import HeroTitle from "./Animation/HeroTitle.jsx";
 
 const Hero = () => {
-
-    const titleAn = useRef(null);
-    const swapAn = useRef(null);
-    const [swapText, setSwapText] = useState("BLANK & HASS");
-
-    useEffect(() => {
-        gsap.from(titleAn.current, {
-            y: 40,
-            duration: 1,
-            ease: "power3.out",
-        });
-
-        const timer = setTimeout(() => {
-            gsap.to(swapAn.current, {
-                y: -20,
-                duration: 0.5,
-                ease: "power2.in",
-                onComplete: () => {
-                    setSwapText("BEWÄHRT & HOCHWÄHRTIG");
-                    gsap.fromTo(
-                        swapAn.current,
-                        { y: 40, opacity: 0 },
-                        { y: 0, opacity: 1, duration: 0.6, ease: "power2.out" }
-                    );
-                },
-            });
-        }, 1800);
-
-        return () => clearTimeout(timer);
-    }, []);
-
+    const paragraphRef = useRef(null);
+    const { titleLetters, swapLetters, swapText } = HeroTitle(paragraphRef);
 
     return (
         <>
-          <section id="hero">
-              <div className="hero-bg"></div>
-              <h1 className="title">
-                  FAHRZEUGTECHNICK<br/> {""} <span ref={swapAn}>{swapText}</span>
-              </h1>
-              <p className="valueSt">Professionelle Reparaturen & Wartungen
-                  für alle Fahrzeugtypen</p>
-              <button className="btn"></button>
-          </section>
+            <section id="hero">
+                <div className="hero-bg"></div>
+
+                <h1 className="title">
+                    <span className="title-container visibility-wrapper">
+                    {titleLetters.map((letter, index) => (
+                        <span
+                            key={`title-${index}`}
+                            className="title-letter text-white"
+                            style={{ opacity: 0 }}
+                        >
+                    {letter}
+                    </span>
+                    ))}
+                    </span>
+                                        <br />
+                                        <span className="swap-container">
+                    {swapLetters.map((letter, index) => (
+                        <span
+                            key={`swap-${index}-${swapText}`}
+                            className="swap-letter text-red"
+                            style={{ opacity: 0 }}
+                        >
+                    {letter === " " ? "\u00A0" : letter}
+                    </span>
+                    ))}
+                    </span>
+                </h1>
+
+                <p ref={paragraphRef} className="valueSt" style={{ opacity: 0 }}>
+                    Professionelle Reparaturen & Wartungen für alle Fahrzeugtypen
+                </p>
+                <div className="btn-cnt"><ContactBtn  /></div>
+            </section>
         </>
     );
 };
