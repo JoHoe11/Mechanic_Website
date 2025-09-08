@@ -5,18 +5,15 @@ const ContactBtn = ({ scrollToContactSection = () => {} }) => {
     const [isClicked, setIsClicked] = useState(false);
     const buttonRef = useRef(null);
 
-    // Animation on component mount
     useEffect(() => {
-        // Start invisible and below final position
-        gsap.set(buttonRef.current, { opacity: 0, y: 40 });
+        gsap.set(buttonRef.current, { opacity: 0, y: 0 });
 
-        // Animate in from bottom with slight delay (after paragraph appears)
         gsap.to(buttonRef.current, {
             opacity: 1,
             y: 0,
-            duration: 0.8,
-            ease: "power2.out",
-            delay: 2 // Slightly after paragraph (which was 1.5)
+            duration: 1,
+            ease: "power3.out",
+            delay: 2.5
         });
     }, []);
 

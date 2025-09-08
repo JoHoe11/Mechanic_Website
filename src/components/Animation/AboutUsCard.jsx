@@ -74,7 +74,7 @@ const StyledWrapper = styled.div`
         background-position: center;
         background-repeat: no-repeat;
         z-index: 3;
-        filter: grayscale(100%) opacity(0.1);
+        filter: grayscale(100%) opacity(0.2);
         transition: filter 0.3s;
         border-radius: 10px;
     }

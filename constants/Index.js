@@ -53,3 +53,39 @@ export const ServicesContainer = [
         ]
     }
 ]
+
+export const ContactInfo = [
+    {
+        title: "Blank",
+        details: [
+            "+49 173 1004793"
+        ]
+    },
+    {
+        title: "Hass",
+        details: [
+            "+49 162 4839244"
+        ]
+    },
+    {
+        title: "Öffnungszeiten",
+        details: [
+            "Montag bis Donnerstag: 08:30 - 17:00",
+            "Freitag: 08:30 - 15:30",
+            "Samstag & Sonntag: Geschlossen"
+        ]
+    },
+    {
+        title: "Adresse",
+        details: [
+            "Brookdamm 7",
+            "49688 Hemmelte"
+        ]
+    }
+]
+
+export const FooterLinks = [
+    {id: 'impressum', title: 'Impressum'},
+    {id: 'datenschutz', title: 'Datenschutz'},
+    {id: 'agb', title: 'AGB'},
+]

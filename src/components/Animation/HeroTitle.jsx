@@ -57,7 +57,7 @@ const HeroTitle = (paragraphRef) => {
                 y: 0,
                 duration: 0.8,
                 ease: "power2.out",
-                delay: 1.5
+                delay: 2
             }
         );
 
@@ -76,7 +76,7 @@ const HeroTitle = (paragraphRef) => {
                     setSwapText("BEWÄHRT & HOCHWÄHRTIG");
                 }
             });
-        }, 3000);
+        }, 4000);
 
         return () => {
             clearTimeout(swapTimer);
