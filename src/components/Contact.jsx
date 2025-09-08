@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaPhoneAlt, FaClock, FaMapMarkerAlt } from "react-icons/fa";
+import {ContactInfo}  from "../../constants/Index.js";
 
 const Contact = () => {
     return (
@@ -18,10 +19,16 @@ const Contact = () => {
                                     <FaPhoneAlt />
                                 </div>
                                 <div className="text">
-                                    <p className="head">Blank</p>
-                                    <h3 className="info">+49 173 1004793</h3>
-                                    <p className="head">Hass</p>
-                                    <h3 className="info">+49 162 4839244</h3>
+                                    {ContactInfo.slice(0, 2).map((info, idx) => (
+                                        <div key={info.title} className="mb-4">
+                                            <p className="head">{info.title}</p>
+                                            <ul>
+                                                {info.details.map((d, i) => (
+                                                    <li className="info" key={i}>{d}</li>
+                                                ))}
+                                            </ul>
+                                        </div>
+                                    ))}
                                 </div>
                             </div>
 
@@ -30,10 +37,12 @@ const Contact = () => {
                                     <FaClock />
                                 </div>
                                 <div className="text">
-                                    <p className="head">Öffnungszeiten</p>
-                                    <h3 className="info">Montag bis Donnerstag: 08:30 - 17:00</h3>
-                                    <h3 className="info">Freitag: 08:30 - 15:30</h3>
-                                    <h3 className="info">Samstag & Sonntag: Geschlossen</h3>
+                                    <p className="head">{ContactInfo[2].title}</p>
+                                    <ul>
+                                        {ContactInfo[2].details.map((d, i) => (
+                                            <li className="info" key={i}>{d}</li>
+                                        ))}
+                                    </ul>
                                 </div>
                             </div>
 
@@ -42,11 +51,12 @@ const Contact = () => {
                                     <FaMapMarkerAlt />
                                 </div>
                                 <div className="text">
-                                    <p className="head">Adresse</p>
-                                    <h3 className="info">
-                                        Brookdamm 7 <br />
-                                        49688 Hemmelte
-                                    </h3>
+                                    <p className="head">{ContactInfo[3].title}</p>
+                                    <ul>
+                                        {ContactInfo[3].details.map((d, i) => (
+                                            <li className="info" key={i}>{d}</li>
+                                        ))}
+                                    </ul>
                                 </div>
                             </div>
                         </div>

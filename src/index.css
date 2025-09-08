@@ -67,6 +67,9 @@ body {
         ul {
             @apply flex-center lg:gap-12 gap-7 font-coiny;
         }
+        li:hover {
+            @apply text-red hover:scale-110 transition-transform;
+        }
         img {
             @apply h-12 w-auto max-w-[160px] object-contain;
         }
@@ -97,17 +100,18 @@ body {
         }
 
         .btn {
-            @apply relative inline-flex h-12 active:scale-95 transition overflow-hidden rounded-lg p-[2px] border border-[#7b0323] focus:outline-none;
+            @apply relative inline-flex h-12 active:scale-95 transition overflow-hidden rounded-lg p-[2px] border border-[#FF0000] focus:outline-none;
 
 
             .btn-spn {
-                    @apply pointer-events-none absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#7a0000_0%,#b80000_30%,#d60000_50%,#b80000_70%,#7a0000_100%)] shadow-[0_0_15px_rgba(200,0,0,0.3)];
+                    @apply pointer-events-none absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#FF3333_0%,#b80000_30%,#d60000_50%,#b80000_70%,#FF3333_100%)] shadow-[0_0_15px_rgba(200,0,0,0.3)];
             }
 
             .btn-dsgn {
                     @apply relative inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg bg-black px-7 text-sm font-medium text-white backdrop-blur-3xl gap-2 z-10;
             }
         }
+
         .swap-container {
             @apply text-red;
         }
@@ -121,7 +125,10 @@ body {
         }
 
         .btn-cnt {
-            @apply flex justify-center pt-10;
+            @apply flex justify-center pt-10 transition-transform;
+        }
+        .btn-cnt:hover {
+            @apply scale-110;
         }
     }
 
@@ -165,12 +172,26 @@ body {
                 @apply w-full max-w-[280px] mx-auto;
             }
 
+            .ServiceCard {
+                @apply max-w-[280px] h-[250px] rounded-[20px] transition-all duration-300;
+
+                z-index: -1;
+            }
+
+            .ServiceCard:hover {
+                box-shadow: 0px 0px 30px 1px #FF000030;
+            }
+
+            .MiddleRow .ServiceCard {
+                @apply h-[570px];
+            }
+
 
             .LeftRow {
                 @apply gap-5 mt-20;
 
                 .InspCard {
-                    @apply rounded-2xl p-6 h-[250px] relative overflow-hidden;
+                    @apply rounded-2xl p-6 h-[250px] relative overflow-hidden transition-all duration-200;
 
                     &::before {
                         content: "";
@@ -205,9 +226,13 @@ body {
                     }
 
                 }
+                .InspCard:hover {
+                    transform: scale(0.98);
+                    box-shadow: 0px 0px 30px 1px #FF000030;
+                }
 
                 .GlasCard {
-                    @apply rounded-2xl p-6 w-[280px] h-[250px] mt-18 relative overflow-hidden;
+                    @apply rounded-2xl p-6 w-[280px] h-[250px] mt-18 relative overflow-hidden transition-all duration-200;
 
                     &::before {
                         content: "";
@@ -241,6 +266,10 @@ body {
                         }
                     }
                 }
+                .GlasCard:hover {
+                    transform: scale(0.98);
+                    box-shadow: 0px 0px 30px 1px #FF000030;
+                }
             }
 
             .MiddleRow {
@@ -248,7 +277,7 @@ body {
 
 
                 .RepCard {
-                    @apply rounded-2xl p-6 h-[570px] relative overflow-hidden;
+                    @apply rounded-2xl p-6 h-[570px] relative overflow-hidden transition-all duration-200;
 
                     &::before {
                         content: "";
@@ -281,7 +310,10 @@ body {
                             }
                         }
                     }
-
+                }
+                .RepCard:hover {
+                    transform: scale(0.99);
+                    box-shadow: 0px 0px 30px 1px #FF000030;
                 }
             }
 
@@ -289,7 +321,7 @@ body {
                 @apply  gap-5 mt-20;
 
                 .UnfCard {
-                    @apply rounded-2xl p-6 h-[250px] relative overflow-hidden;
+                    @apply rounded-2xl p-6 h-[250px] relative overflow-hidden transition-all duration-200;
 
                     &::before {
                         content: "";
@@ -322,9 +354,13 @@ body {
                         }
                     }
                 }
+                .UnfCard:hover {
+                    transform: scale(0.98);
+                    box-shadow: 0px 0px 30px 1px #FF000030;
+                }
 
                 .MotCard {
-                    @apply rounded-2xl p-6 pt-3 h-[250px] mt-18 relative overflow-hidden;
+                    @apply rounded-2xl p-6 pt-3 h-[250px] mt-18 relative overflow-hidden transition-all duration-200;
 
                     &::before {
                         content: "";
@@ -368,6 +404,10 @@ body {
                             }
                         }
                     }
+                }
+                .MotCard:hover {
+                    transform: scale(0.98);
+                    box-shadow: 0px 0px 30px 1px #FF000030;
                 }
             }
         }
@@ -505,7 +545,7 @@ body {
                 @apply flex-center lg:gap-12 gap-7 font-martel text-sm mb-5;
             }
             li:hover {
-                @apply text-red;
+                @apply text-red hover:scale-110 transition-transform;
             }
 
             .Rights {

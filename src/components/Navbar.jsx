@@ -20,6 +20,13 @@ const Navbar = () => {
     )
     })
 
+    const scrollToSection = (sectionId) => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     return (
             <nav>
                 <div>
@@ -30,7 +37,7 @@ const Navbar = () => {
                     <ul>
                         {navLinks.map((link) => (
                             <li key={link.id}>
-                                <a href={'#${link.href}'}>{link.title}</a>
+                                <a onClick={() => scrollToSection(link.id)} style={{ cursor: 'pointer' }}> {link.title}</a>
                             </li>
                         ))}
                     </ul>
