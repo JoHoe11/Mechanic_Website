@@ -6,6 +6,13 @@ const Hero = () => {
     const paragraphRef = useRef(null);
     const { titleLetters, swapLetters, swapText } = HeroTitle(paragraphRef);
 
+    const scrollToContactSection = () => {
+        const contactSection = document.getElementById('contact'); // Assuming 'contact' is your section ID
+        if (contactSection) {
+            contactSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     return (
         <>
             <section id="hero">
@@ -40,7 +47,7 @@ const Hero = () => {
                 <p ref={paragraphRef} className="valueSt" style={{ opacity: 0 }}>
                     Professionelle Reparaturen & Wartungen für alle Fahrzeugtypen
                 </p>
-                <div className="btn-cnt"><ContactBtn  /></div>
+                <div className="btn-cnt" ><ContactBtn scrollToContactSection={scrollToContactSection} /></div>
             </section>
         </>
     );

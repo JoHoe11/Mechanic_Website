@@ -1,6 +1,7 @@
 import React from 'react';
 import {FooterLinks} from "../../constants/Index.js";
 import Socials from "./Animation/Socials";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
     return (
@@ -10,7 +11,7 @@ const Footer = () => {
                 <ul>
                     {FooterLinks.map((link) => (
                         <li key={link.id}>
-                            <a href={'#${link.href}'}>{link.title}</a>
+                            <Link to={link.href}>{link.title}</Link>
                         </li>
                     ))}
                 </ul>

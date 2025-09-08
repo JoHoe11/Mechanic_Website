@@ -26,6 +26,8 @@ const ContactBtn = ({ scrollToContactSection = () => {} }) => {
         }, 500);
     };
 
+
+
     return (
         <button
             ref={buttonRef}

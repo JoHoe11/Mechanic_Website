@@ -85,7 +85,7 @@ export const ContactInfo = [
 ]
 
 export const FooterLinks = [
-    {id: 'impressum', title: 'Impressum'},
-    {id: 'datenschutz', title: 'Datenschutz'},
-    {id: 'agb', title: 'AGB'},
+    {id: 'home', href: "/", title: 'Home'},
+    {id: 'impressum', href: "./Impressum", title: 'Impressum'},
+    {id: 'datenschutz',href: "./privacy", title: 'Datenschutzerklärung'},
 ]
