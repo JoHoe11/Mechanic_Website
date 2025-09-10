@@ -25,7 +25,7 @@ const StyledWrapper = styled.div`
    width: 190px;
    height: 254px;
    background-color: #1a1a1a;
-   border-radius:;
+   border-radius:20px;
    transition: all .2s;
   }
 
@@ -35,7 +35,7 @@ const StyledWrapper = styled.div`
   }
 
   .card:hover {
-   box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
+   box-shadow: 0 0 30px 1px rgba(0, 255, 117, 0.30);
   }`;
 
 export default ServiceCard;

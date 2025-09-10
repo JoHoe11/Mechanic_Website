@@ -32,22 +32,6 @@ body {
     @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
 }
 
-@utility text-gradient {
-    background: linear-gradient(to bottom, #ffffff, #898989);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-}
-
-@utility radial-gradient {
-    background: radial-gradient(
-            circle at center,
-            #434343 0%,
-            #000 50%,
-            transparent 100%
-    );
-}
-
 @layer components {
     main {
         @apply w-full overflow-x-hidden;
@@ -57,78 +41,113 @@ body {
         @apply fixed z-69 w-full bg-black/60 backdrop-blur-md border-b border-black/70;
 
         div {
-            @apply flex md:flex-row flex-col md:justify-between items-center gap-5 py-5 px-12; ;
-        }
+            @apply flex flex-row  justify-between items-center gap-5 py-5 lg:px-16 px-6 md:px-10;
 
-        a {
-            @apply cursor-pointer text-nowrap md:text-base text-sm;
-        }
+            a {
+                @apply cursor-pointer text-nowrap md:text-base text-sm;
 
-        ul {
-            @apply flex-center lg:gap-12 gap-7 font-coiny;
-        }
-        li:hover {
-            @apply text-red hover:scale-110 transition-transform;
-        }
-        img {
-            @apply h-12 w-auto max-w-[160px] object-contain;
+                img {
+                    @apply h-8 max-w-[120px] md:h-12 w-auto md:max-w-[160px] object-contain;
+                }
+            }
+
+            ul {
+                @apply hidden md:flex lg:gap-12 gap-7 font-coiny;
+
+                li:hover {
+                    @apply text-red hover:scale-110 transition-transform;
+                }
+            }
+
+            .Links {
+                @apply absolute top-full left-0 w-full bg-gray flex flex-col items-start p-4 md:hidden z-10 ;
+
+                a {
+                    @apply text-white py-2 w-full hover:underline;
+                }
+            }
         }
     }
 
-    .hero-bg {
-        @apply absolute inset-0 w-full h-full bg-[url('/images/hero-bg.jpg')] bg-[length:100%_100%] bg-no-repeat bg-center opacity-10 pointer-events-none select-none;
-    }
+
 
 
     #hero {
         @apply relative z-10 min-h-dvh w-full border border-transparent;
 
-        h1 {
-            @apply mt-80 text-lg sm:text-2xl md:text-4xl lg:text-6xl tracking-tight text-center font-kameron font-bold z-20;
+        .hero-bg {
+            @apply absolute inset-0 w-full h-full bg-[url('/images/hero-bg.jpg')] bg-cover bg-center opacity-10 pointer-events-none select-none;
+        }
 
-            .swap-letter {
-                @apply z-15 text-red;
+        .hero-text {
+            @apply absolute left-1/2 top-[50%] 2xl:top-[40%] -translate-x-1/2 -translate-y-1/2;
+
+            h1 {
+                @apply text-center text-4xl sm:text-4xl md:text-5xl lg:text-6xl tracking-tight  font-kameron font-bold z-20 bg-clip-text bg-black;
+
+                .title-container {
+                    @apply mb-0;
+                }
+
+                .visibility-wrapper {
+                    min-height: 1.2em;
+                }
+
+                .swap-container {
+                    @apply text-red mt-3 sm:mt-0;
+
+                    .swap-letter {
+                        @apply z-15 text-red;
+                    }
+                }
+
+                .title-letter:empty, .swap-letter:empty {
+                     @apply mr-0;
+                 }
+                .title-row {
+                    @apply flex flex-row flex-wrap justify-center;
+                }
+                @media (max-width: 640px) {
+                    .title-row {
+                        @apply flex-col;
+                    }
+
+                    .title-word {
+                        @apply block text-center;
+                    }
+
+                    .title-word + .title-word {
+                        @apply mt-1;
+                    }
+                }
             }
-        }
 
-        span {
-            @apply text-red;
-        }
-
-        .valueSt {
-            @apply mt-6 text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-center font-martel max-w-xl mx-auto text-white;
-        }
-
-        .btn {
-            @apply relative inline-flex h-12 active:scale-95 transition overflow-hidden rounded-lg p-[2px] border border-[#FF0000] focus:outline-none;
-
-
-            .btn-spn {
-                    @apply pointer-events-none absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#FF3333_0%,#b80000_30%,#d60000_50%,#b80000_70%,#FF3333_100%)] shadow-[0_0_15px_rgba(200,0,0,0.3)];
+            span {
+                @apply text-red;
             }
 
-            .btn-dsgn {
-                    @apply relative inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg bg-black px-7 text-sm font-medium text-white backdrop-blur-3xl gap-2 z-10;
+            .valueSt {
+                @apply mt-3 md:mt-6 text-sm sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-center font-martel max-w-xl mx-auto text-white;
             }
-        }
 
-        .swap-container {
-            @apply text-red;
-        }
+            .btn {
+                 @apply relative mt-0 inline-flex h-10 md:h-12 active:scale-95 transition overflow-hidden rounded-lg p-[2px] border border-[#FF0000] focus:outline-none;
 
-        .title-letter:empty, .swap-letter:empty {
-            @apply mr-0;
-        }
 
-        .visibility-wrapper {
-            min-height: 1.2em;
-        }
+                 .btn-spn {
+                     @apply pointer-events-none absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#FF3333_0%,#b80000_30%,#d60000_50%,#b80000_70%,#FF3333_100%)] shadow-[0_0_15px_rgba(200,0,0,0.3)];
+                 }
 
-        .btn-cnt {
-            @apply flex justify-center pt-10 transition-transform;
-        }
-        .btn-cnt:hover {
-            @apply scale-110;
+                 .btn-dsgn {
+                     @apply relative inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg bg-black px-4 md:px-7 text-sm font-medium text-white backdrop-blur-3xl gap-2 z-10;
+                 }
+             }
+            .btn-cnt {
+                @apply flex justify-center pt-5 md:pt-10 transition-transform;
+            }
+            .btn-cnt:hover {
+                @apply scale-110;
+            }
         }
     }
 
@@ -136,18 +155,18 @@ body {
         @apply relative min-h-dvh w-full overflow-hidden;
 
         h1 {
-            @apply mt-30 text-4xl sm:text-4xl md:text-6xl lg:text-6xl tracking-tight text-center font-kameron font-bold;
+            @apply mt-30 text-5xl sm:text-5xl md:text-6xl lg:text-6xl tracking-tight text-center font-kameron font-bold;
             span {
                 @apply text-red;
             }
         }
 
         p {
-            @apply  mt-1 text-xs sm:text-sm md:text-lg lg:text-lg xl:text-lg text-center font-coiny max-w-xl mx-auto text-white;
+            @apply  mt-1 text-sm sm:text-sm md:text-lg lg:text-lg xl:text-lg text-center font-coiny max-w-xl mx-auto text-white;
         }
 
         .grid  {
-            @apply justify-center grid grid-cols-1 min-[900px]:grid-cols-3 gap-2 w-full max-w-6xl mx-auto px-4;
+            @apply justify-center grid grid-cols-1 min-[900px]:grid-cols-3 gap-0 md:gap-2 w-full max-w-6xl mx-auto px-4;
 
             /*Responsive Stuff*/
             .LeftRow, .MiddleRow, .RightRow {
@@ -179,7 +198,7 @@ body {
             }
 
             .ServiceCard:hover {
-                box-shadow: 0px 0px 30px 1px #FF000030;
+                box-shadow: 0 0 30px 1px #FF000030;
             }
 
             .MiddleRow .ServiceCard {
@@ -188,7 +207,7 @@ body {
 
 
             .LeftRow {
-                @apply gap-5 mt-20;
+                @apply gap-5 mt-5 md:mt-20;
 
                 .InspCard {
                     @apply rounded-2xl p-6 h-[250px] relative overflow-hidden transition-all duration-200;
@@ -228,11 +247,11 @@ body {
                 }
                 .InspCard:hover {
                     transform: scale(0.98);
-                    box-shadow: 0px 0px 30px 1px #FF000030;
+                    box-shadow: 0 0 30px 1px #FF000030;
                 }
 
                 .GlasCard {
-                    @apply rounded-2xl p-6 w-[280px] h-[250px] mt-18 relative overflow-hidden transition-all duration-200;
+                    @apply rounded-2xl p-6 w-[280px] h-[250px]  mt-5 md:mt-18 relative overflow-hidden transition-all duration-200;
 
                     &::before {
                         content: "";
@@ -268,12 +287,12 @@ body {
                 }
                 .GlasCard:hover {
                     transform: scale(0.98);
-                    box-shadow: 0px 0px 30px 1px #FF000030;
+                    box-shadow: 0 0 30px 1px #FF000030;
                 }
             }
 
             .MiddleRow {
-                @apply  gap-5 mt-20;
+                @apply  gap-5 mt-5 md:mt-20;
 
 
                 .RepCard {
@@ -313,12 +332,12 @@ body {
                 }
                 .RepCard:hover {
                     transform: scale(0.99);
-                    box-shadow: 0px 0px 30px 1px #FF000030;
+                    box-shadow: 0 0 30px 1px #FF000030;
                 }
             }
 
             .RightRow {
-                @apply  gap-5 mt-20;
+                @apply  gap-5 mt-5 md:mt-20;
 
                 .UnfCard {
                     @apply rounded-2xl p-6 h-[250px] relative overflow-hidden transition-all duration-200;
@@ -356,11 +375,11 @@ body {
                 }
                 .UnfCard:hover {
                     transform: scale(0.98);
-                    box-shadow: 0px 0px 30px 1px #FF000030;
+                    box-shadow: 0 0 30px 1px #FF000030;
                 }
 
                 .MotCard {
-                    @apply rounded-2xl p-6 pt-3 h-[250px] mt-18 relative overflow-hidden transition-all duration-200;
+                    @apply rounded-2xl p-6 pt-3 h-[250px] mt-5 md:mt-18 relative overflow-hidden transition-all duration-200;
 
                     &::before {
                         content: "";
@@ -407,7 +426,7 @@ body {
                 }
                 .MotCard:hover {
                     transform: scale(0.98);
-                    box-shadow: 0px 0px 30px 1px #FF000030;
+                    box-shadow: 0 0 30px 1px #FF000030;
                 }
             }
         }
@@ -418,32 +437,35 @@ body {
         @apply min-h-screen py-28 2xl:px-0 px-5 container mx-auto;
 
         h1 {
-            @apply text-center text-4xl sm:text-5xl md:text-6xl lg:text-6xl tracking-tight font-kameron font-bold text-red;
+            @apply text-center text-5xl sm:text-6xl md:text-6xl lg:text-6xl tracking-tight font-kameron font-bold text-red;
 
             span {
                 @apply text-white;
             }
         }
         p {
-            @apply mt-1 text-xs sm:text-sm md:text-lg lg:text-lg xl:text-lg text-center font-coiny max-w-xl mx-auto text-white;
+            @apply mt-1 text-sm sm:text-sm md:text-lg lg:text-lg xl:text-lg text-center font-coiny max-w-xl mx-auto text-white;
 
             span {
                 @apply text-red;
             }
         }
 
-        .Blank {
-            @apply flex gap-30 justify-center flex-wrap mt-20;
+        .Us {
+            @apply flex flex-col md:flex-row justify-center items-center gap-8 mt-12;
+        }
+        .BH {
+            @apply transition-all duration-300;
         }
 
 
     }
 
     #contact {
-        @apply min-h-screen py-16 md:py-24 bg-black text-white overflow-hidden;
+        @apply min-h-screen  bg-black text-white overflow-hidden;
 
         .wrap {
-            @apply container mx-auto px-4 md:px-6 lg:px-8 flex flex-col lg:flex-row gap-12 lg:gap-16;
+            @apply container mx-auto px-6 py-16 md:py-24 flex flex-col lg:flex-row gap-12 lg:gap-16;
 
 
             .left {
@@ -451,7 +473,7 @@ body {
 
 
                 .header {
-                    @apply mb-20;
+                    @apply mb-10;
 
 
                     h2 {
@@ -479,11 +501,11 @@ body {
                 }
 
                 .container {
-                    @apply space-y-24;
-
+                    @apply space-y-16;
 
                     .item {
                         @apply flex items-start gap-5;
+
                     }
 
                     .icon-circle {
@@ -498,7 +520,7 @@ body {
                     }
 
                     .head {
-                        @apply text-gray-500 text-sm md:text-base mb-1;
+                        @apply text-gray-500 text-sm md:text-base mb-2;
                     }
 
                     .info {
@@ -508,10 +530,10 @@ body {
             }
 
             .right {
-                @apply w-full lg:w-1/2;
+                @apply w-full lg:w-3/5 h-full lg:h-auto;
 
                 .map-container {
-                    @apply w-full h-full min-h-[400px] md:min-h-[500px] rounded-lg overflow-hidden shadow-lg border border-gray-800;
+                    @apply w-full h-full min-h-[400px] md:min-h-[500px] border-l border-black;
 
                     .map {
                         @apply w-full h-full min-h-[400px] md:min-h-[500px];
@@ -528,9 +550,13 @@ body {
                 }
 
                 .right {
-                    @apply max-w-xl;
+                    @apply max-w-xl w-full;
+
+                    .map-container {
+                        @apply rounded-none border-l-0 border-t border-black;
+                    }
                 }
-                }
+            }
 
         }
     }

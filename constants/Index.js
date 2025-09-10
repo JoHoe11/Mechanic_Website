@@ -78,8 +78,7 @@ export const ContactInfo = [
     {
         title: "Adresse",
         details: [
-            "Brookdamm 7",
-            "49688 Hemmelte"
+            "Brookdamm 7, 49688 Hemmelte, Deutschland"
         ]
     }
 ]

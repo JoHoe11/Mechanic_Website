@@ -11,15 +11,19 @@ const AboutUs = () => {
 
                 <p>Wir sind <span>zwei</span> Schrauber mit Herz und haben uns dieses Jahr den Traum vom eigenen Betrieb erfüllt. Mit <span>Leidenschaft</span> und <span>Erfahrung</span> kümmern wir uns um alles rund ums Auto.</p>
 
-                <div className="grid">
-                    <div className="Blank">
+                <div className="Us">
+                    <div className="BH">
                         <WorkerCard
                             name="Sergej Blank"
                             credentials="Kfz-Meister & Inhaber"
                             Knowledge="15+ Jahre Erfahrung"
                             imageSrc="/images/Worker.png"
                         />
-                        <span style={{ animationDelay: '3s' }}>
+
+                    </div>
+
+                    <div className="BH">
+                       <span style={{ animationDelay: '3s' }}>
                             <WorkerCard
                                 name="Hass"
                                 credentials="Kfz-Meister & Inhaber"
@@ -27,10 +31,6 @@ const AboutUs = () => {
                                 imageSrc="/images/Worker.png"
                             />
                         </span>
-                    </div>
-
-                    <div className="Hass">
-
                     </div>
 
                 </div>

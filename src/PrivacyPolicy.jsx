@@ -50,11 +50,11 @@ const PrivacyPolicy = () => {
                 Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht
                 möglich. Hinweis zur verantwortlichen Stelle
                 Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:
-                Beispielfirma
-                Musterweg 10
-                90210 Musterstadt
-                Telefon: +49 (0) 123 44 55 66
-                E-Mail: info@beispielfirma.de
+                Fahrzeugtechnik Blank&Hass
+                Brookdamm 7
+                49688 Hemmelte
+                Telefon: +49 162 4839244
+                Telefon: +49 173 1004793
                 Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder gemeinsam mit anderen über
                 die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z. B. Namen, E-Mail-Adressen o. Ä.)
                 entscheidet.

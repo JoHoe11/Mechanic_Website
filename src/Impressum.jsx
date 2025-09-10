@@ -53,10 +53,6 @@ const Impressum = () => {
                     Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.
                 </p>
             </section>
-
-            <div className="text-sm text-gray-400 border-t border-gray-100 pt-4 mt-8">
-                Dieses Impressum wurde mit Hilfe eines Generators erstellt.
-            </div>
         </div>
     );
 };

@@ -21,12 +21,22 @@ const WorkerCard = ({ name, credentials, imageSrc, Knowledge }) => {
 const StyledWrapper = styled.div`
     .card {
         position: relative;
-        width: 402px;
-        height: 602px;
+        width: 290px;
+        height: 435px;
         border-radius: 10px;
         overflow: hidden;
         align-items: center;
         justify-content: center;
+
+        @media (max-width: 360px) {
+            width: 250px;
+            height: 375px;
+        }
+        
+        @media (min-width: 1024px) {
+            width: 402px;
+            height: 602px;
+        }
     }
 
     /* This is the animated border */
@@ -98,24 +108,36 @@ const StyledWrapper = styled.div`
 
     .worker-info h4 {
         color: white;
-        font-size: 40px;
+        font-size: 28px;
         margin: 0 0 5px 0;
         font-weight: bold;
         font-family: 'Kameron', serif;
+
+        @media (min-width: 1024px) {
+            font-size: 40px;
+        }
     }
 
     .worker-info .Cred {
         color: red;
-        font-size: 24px;
+        font-size: 18px;
         margin: 0;
         font-family: 'Coiny', system-ui;
+
+        @media (min-width: 1024px) {
+            font-size: 24px;
+        }
     }
 
     .worker-info .Know {
         color: white;
-        font-size: 24px;
+        font-size: 18px;
         margin: 0;
         font-family: 'Coiny', system-ui;
+
+        @media (min-width: 1024px) {
+            font-size: 24px;
+        }
     }
 
     /* Animation for the rotating border */

@@ -9,7 +9,7 @@ const HeroTitle = (paragraphRef) => {
     const [isLoaded, setIsLoaded] = useState(false);
 
     useEffect(() => {
-        const title = "FAHRZEUGTECHNICK";
+        const title = "FAHRZEUGTECHNIK";
         setTitleLetters(title.split(""));
 
         setTimeout(() => {

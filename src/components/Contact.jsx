@@ -45,7 +45,6 @@ const Contact = () => {
                                     </ul>
                                 </div>
                             </div>
-
                             <div className="item">
                                 <div className="icon-circle">
                                     <FaMapMarkerAlt />
