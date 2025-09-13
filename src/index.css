@@ -83,7 +83,7 @@ body {
             @apply absolute left-1/2 top-[50%] 2xl:top-[40%] -translate-x-1/2 -translate-y-1/2;
 
             h1 {
-                @apply text-center text-4xl sm:text-4xl md:text-5xl lg:text-6xl tracking-tight  font-kameron font-bold z-20 bg-clip-text bg-black;
+                @apply text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl tracking-tight  font-kameron font-bold z-20 bg-clip-text bg-black;
 
                 .title-container {
                     @apply mb-0;
