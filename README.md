@@ -1,12 +1,83 @@
-# React + Vite
+# Mechanic Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive one-page website built for a local mechanic business. The site provides essential information about the company, services, and contact details. Designed with a sleek user experience using **React**, **TailwindCSS**, and **GSAP** for animations.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚗 Table of Contents
 
-## Expanding the ESLint configuration
+- [Introduction](#introduction)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Folder Structure](#folder-structure)
+- [👥 Contributor](#-contributor)
+- [Contact](#contact)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Introduction
+
+Mechanic Website is a modern, visually appealing one-page web solution for local mechanic businesses. It helps businesses showcase their services, company background, and contact information to attract and engage customers. The site is designed for great user experience, performance, and seamless animations.
+
+It emphasizes:
+
+- Clear service information
+- Easy-to-find contact details
+- Smooth animations for a professional feel
+
+![Website Screenshot](./public/images/screenshot.png)
+---
+
+## Features
+
+- 📱 Responsive design (works across devices)
+- 🎨 Modern UI styled with TailwindCSS and Styled Components
+- 🎥 Smooth animations powered by GSAP & Framer Motion
+- 🔗 React Router for navigation handling
+- 📌 Contact details easily accessible
+
+---
+
+## Tech Stack
+
+- **Frontend:** React, Vite, TailwindCSS, Styled Components
+- **Animations:** GSAP, Framer Motion
+- **Icons & UI:** Heroicons, React Icons
+- **Routing & Responsiveness:** React Router, React Responsive
+- **Tooling: ESLint, Vite** ESLint, Vite
+
+---
+
+
+## Folder Structure
+
+```
+Mechanic_Website/
+├── public/
+├── src/
+│   ├── components/
+│       ├── Animation/
+│       └──...
+│   ├── App.jsx
+│   ├── Impressum.jsx
+│   ├── PrivacyPolicy.jsx
+│   ├── index.css
+│   └── main.jsx
+├── index.html
+├── tailwind.config.js
+├── package.json
+└── README.md
+```
+
+---
+
+## 👥 Contributor
+
+- **JoHoe11** — Developer
+  
+---
+
+## Contact
+
+For questions or feedback, please contact [JoHoe11](https://github.com/JoHoe11).
+```
