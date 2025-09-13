@@ -25,7 +25,7 @@ It emphasizes:
 - Easy-to-find contact details
 - Smooth animations for a professional feel
 
-![Website Screenshot](public/images/Screenshot 2025-09-13 152808.png)
+![Website Screenshot](Screenshot.png)
 ---
 
 ## Features
