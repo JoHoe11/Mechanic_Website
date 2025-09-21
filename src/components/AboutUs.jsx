@@ -25,7 +25,7 @@ const AboutUs = () => {
                     <div className="BH">
                        <span style={{ animationDelay: '3s' }}>
                             <WorkerCard
-                                name="Hass"
+                                name="Andreas Hass"
                                 credentials="Kfz-Mechatroniker & Inhaber"
                                 Knowledge="15+ Jahre Erfahrung"
                                 imageSrc="/images/Worker.png"
